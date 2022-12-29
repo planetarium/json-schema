@@ -16,13 +16,15 @@
       "properties": {
         "recipient": {
           "description": "Address of the recipient to receive the coupons.",
-          "type": "string"
+          "type": "string",
+          "pattern": "^(0x)?[a-fA-F0-9]{40}$"
         },
         "coupons": {
           "description": "Coupon GUIDs to transfer.",
           "type": "array",
           "items": {
-            "type": "string"
+            "type": "string",
+            "format": "uuid"
           }
         }
       }
