@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "title": "TransferCouponData",
+  "type": "array",
+  "items": {
+    "$ref": "#/$defs/depositSpec"
+  },
+  "$defs": {
+    "depositSpec": {
+      "description": "Coupon GUIDs to transfer paired with the recipient address.",
+      "type": "object",
+      "required": [
+        "recipient",
+        "coupons"
+      ],
+      "properties": {
+        "recipient": {
+          "description": "Address of the recipient to receive the coupons.",
+          "type": "string"
+        },
+        "coupons": {
+          "description": "Coupon GUIDs to transfer.",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
