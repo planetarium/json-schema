@@ -1,4 +1,5 @@
 {
+  "$id": "https://planetarium.github.io/json-schema/NineChronicles/2022-12/IssueCouponData.schema.json",
   "$schema": "https://json-schema.org/draft/2019-09/schema",
   "title": "IssueCouponData",
   "type": "object",
