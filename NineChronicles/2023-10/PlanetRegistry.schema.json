@@ -1,83 +1,10 @@
 {
     "$id": "https://planetarium.github.io/json-schema/NineChronicles/2023-10/PlanetRegistry.schema.json",
     "$schema": "https://json-schema.org/draft/2019-09/schema",
-    "$defs": {
-        "planetSpec" : {
-            "type": "object",
-            "required": [
-                "id",
-                "name",
-                "rpcEndpoints"
-            ],
-            "properties": {
-                "id": {
-                    "description": "The unique identifier for the planet",
-                    "type": "string",
-                    "pattern": "^0x[a-fA-F0-9]{12}$"
-                },
-                "name": {
-                    "description": "The human-readable name for the planet",
-                    "type": "string"
-                },
-                "genesisHash": {
-                    "description": "The block hash of the genesis block for the planet",
-                    "type": "string",
-                    "pattern": "^[a-fA-F0-9]{64}$"
-                },
-                "genesisUri": {
-                    "description": "The URI for fetching the genesis block content",
-                    "type": "string",
-                    "format": "uri"
-                },
-                "rpcEndpoints": {
-                    "description": "The list of rpc endpoints for the planet",
-                    "type": "object",
-                    "required": [
-                        "headless.gql",
-                        "headless.grpc"
-                    ],
-                    "properties": {
-                        "headless.gql": {
-                            "type": "array",
-                            "items": {
-                                "type": "string",
-                                "format": "uri"
-                            }
-                        },
-                        "headless.grpc": {
-                            "type": "array",
-                            "items": {
-                                "type": "string",
-                                "format": "uri"
-                            }
-                        },
-                        "dp.gql": {
-                            "type": "array",
-                            "items": {
-                                "type": "string",
-                                "format": "uri"
-                            }
-                        },
-                        "9cscan.rest": {
-                            "type": "array",
-                            "items": {
-                                "type": "string",
-                                "format": "uri"
-                            }
-                        }
-                    },
-                    "additionalProperties": false
-                }
-            },
-            "additionalProperties": false
-        }
-    },
     "title": "PlanetRegistry",
-    "type": "object",
-    "patternProperties": {
-        "^0x[a-fA-F0-9]{12}$": {
-            "$ref": "#/$defs/planetSpec"
-        }
+    "type": "array",
+    "items": {
+        "$ref": "PlanetSpec.schema.json"
     },
     "additionalProperties": false
 }
