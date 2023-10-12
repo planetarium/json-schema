@@ -1,5 +1,5 @@
 {
-    "$id": "https://planetarium.github.io/json-schema/NineChronicles/2023-10/PlanetSpec.schema.json",
+    "$id": "https://planetarium.github.io/json-schema/NineChronicles/2023-10/PlanetRegistry.schema.json",
     "$schema": "https://json-schema.org/draft/2019-09/schema",
     "$defs": {
         "planetSpec" : {
@@ -65,9 +65,11 @@
                                 "format": "uri"
                             }
                         }
-                    }
+                    },
+                    "additionalProperties": false
                 }
-            }            
+            },
+            "additionalProperties": false
         }
     },
     "title": "PlanetRegistry",
