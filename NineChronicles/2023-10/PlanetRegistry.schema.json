@@ -1,0 +1,10 @@
+{
+    "$id": "https://planetarium.github.io/json-schema/NineChronicles/2023-10/PlanetRegistry.schema.json",
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "title": "PlanetRegistry",
+    "type": "array",
+    "items": {
+        "$ref": "PlanetSpec.schema.json"
+    },
+    "additionalProperties": false
+}
