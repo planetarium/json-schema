@@ -57,6 +57,27 @@
                         "format": "uri"
                     }
                 },
+                "world-boss.gql": {
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "format": "uri"
+                    }
+                },
+                "patrol-reward.gql": {
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "format": "uri"
+                    }
+                },
+                "market.gql": {
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "format": "uri"
+                    }
+                },
                 "9cscan.rest": {
                     "type": "array",
                     "items": {
