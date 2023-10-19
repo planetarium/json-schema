@@ -57,7 +57,7 @@
                         "format": "uri"
                     }
                 },
-                "world-boss.gql": {
+                "world-boss.rest": {
                     "type": "array",
                     "items": {
                         "type": "string",
@@ -71,7 +71,7 @@
                         "format": "uri"
                     }
                 },
-                "market.gql": {
+                "market.rest": {
                     "type": "array",
                     "items": {
                         "type": "string",
